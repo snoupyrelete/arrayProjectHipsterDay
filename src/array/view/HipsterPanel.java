@@ -11,6 +11,8 @@ public class HipsterPanel extends JPanel
 	private JLabel infoLabel;
 	private JButton myButton;
 	private ArrayController baseController;
+
+	
 	
 	public HipsterPanel(ArrayController baseController)
 	{
@@ -19,7 +21,7 @@ public class HipsterPanel extends JPanel
 		this.baseLayout = new SpringLayout();
 		this.myButton = new JButton("Click me");
 		this.infoLabel = new JLabel("WOW words!");
-		this.dropDown = new JComboBox(baseController.getWords());
+		this.dropDown = new JComboBox(baseController.getHipsters());
 		
 		
 		setupPanel();
