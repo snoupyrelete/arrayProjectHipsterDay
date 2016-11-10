@@ -1,6 +1,7 @@
 package array.controller;
 
 import array.model.Hipster;
+import array.view.HipsterFrame;
 
 public class ArrayController
 {
@@ -8,6 +9,7 @@ public class ArrayController
 	private String[] words = {"this","is","the","next","level","of","hipster","the","initialization","sequence"};
 	private Hipster[] hipsters;
 	private int[]numbers;
+	private HipsterFrame appFrame;
 	
 	public ArrayController()
 	{
@@ -15,6 +17,7 @@ public class ArrayController
 		showHipsterLevelThree();
 		//Level1
 		hipsters = new Hipster[5];
+		appFrame = new HipsterFrame(this);
 	}
 	
 	public void start()
@@ -54,5 +57,9 @@ public class ArrayController
 	public Hipster[] getHipsters()
 	{
 		return hipsters;
+	}
+	public int[] getNumbers()
+	{
+		return numbers;
 	}
 }

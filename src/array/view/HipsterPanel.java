@@ -14,11 +14,13 @@ public class HipsterPanel extends JPanel
 	
 	public HipsterPanel(ArrayController baseController)
 	{
+		super();
 		this.baseController = baseController;
 		this.baseLayout = new SpringLayout();
 		this.myButton = new JButton("Click me");
 		this.infoLabel = new JLabel("WOW words!");
 		this.dropDown = new JComboBox(baseController.getWords());
+		
 		
 		setupPanel();
 		setupLayout();
@@ -36,7 +38,12 @@ public class HipsterPanel extends JPanel
 	
 	private void setupLayout()
 	{
-		
+		baseLayout.putConstraint(SpringLayout.NORTH, myButton, 85, SpringLayout.NORTH, this);
+		baseLayout.putConstraint(SpringLayout.WEST, myButton, 140, SpringLayout.WEST, this);
+		baseLayout.putConstraint(SpringLayout.NORTH, dropDown, 14, SpringLayout.SOUTH, myButton);
+		baseLayout.putConstraint(SpringLayout.WEST, dropDown, 161, SpringLayout.WEST, this);
+		baseLayout.putConstraint(SpringLayout.WEST, infoLabel, 0, SpringLayout.WEST, myButton);
+		baseLayout.putConstraint(SpringLayout.SOUTH, infoLabel, -21, SpringLayout.NORTH, myButton);
 	}
 	
 	private void setupListeners()
