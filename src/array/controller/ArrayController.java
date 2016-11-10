@@ -19,19 +19,25 @@ public class ArrayController
 	
 	public void start()
 	{
-		for (int currentInt: numbers)
+		// You replace the originally null values of the array, each with a name of "Hipster #" (0 through n-1).
+		for(int index = 0; index < hipsters.length; index++)
 		{
-			System.out.println(currentInt);
+			hipsters[index] = new Hipster("Hipster #" + index);
 		}
-		System.out.println("BREAK");
-		for (String currentString: words)
-		{
-			System.out.println(currentString);
-		}
-		System.out.println("BREAK");
-		for (Hipster currentHipster: hipsters)
+		
+		for(Hipster currentHipster: hipsters)
 		{
 			System.out.println(currentHipster);
+		}
+		
+		for(int index = 0; index < numbers.length; index++)
+		{
+			
+		}
+		
+		for(int index = 0; index < words.length; index++)
+		{
+			
 		}
 	}
 }
