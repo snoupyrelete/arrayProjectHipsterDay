@@ -5,7 +5,7 @@ import array.view.HipsterFrame;
 
 public class ArrayController
 {
-	//Level 2
+	
 	private String[] words = {"this","is","the","next","level","of","hipster","the","initialization","sequence"};
 	private Hipster[] hipsters;
 	private int[]numbers;
