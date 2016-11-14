@@ -17,7 +17,13 @@ public class ArrayController
 		showHipsterLevelThree();
 		//Level1
 		hipsters = new Hipster[5];
+		for(int index = 0; index < hipsters.length; index++)
+		{
+			hipsters[index] = new Hipster("Hipster #" + index);
+		}
+		
 		appFrame = new HipsterFrame(this);
+
 	}
 	
 	public void start()
@@ -25,10 +31,7 @@ public class ArrayController
 		// You replace the originally null values of the array, each with a name of "Hipster #" (0 through n-1).
 		// Objects have default value of null.
 		// Primitives have default value of 0.
-		for(int index = 0; index < hipsters.length; index++)
-		{
-			hipsters[index] = new Hipster("Hipster #" + index);
-		}
+		
 		
 		for(Hipster currentHipster: hipsters)
 		{
