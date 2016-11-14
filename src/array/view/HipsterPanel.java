@@ -3,6 +3,8 @@ package array.view;
 import javax.swing.*;
 import array.controller.ArrayController;
 import java.awt.Color;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 public class HipsterPanel extends JPanel
 {
@@ -48,6 +50,13 @@ public class HipsterPanel extends JPanel
 	
 	private void setupListeners()
 	{
-		
+		dropDown.addActionListener(new ActionListener()
+		{
+			public void actionPerformed(ActionEvent selection)
+			{
+				// toString() of the selected Hipster
+				infoLabel.setText(dropDown.getSelectedItem().toString());
+			}
+		});
 	}
 }
