@@ -57,5 +57,15 @@ public class HipsterPanel extends JPanel
 				infoLabel.setText(dropDown.getSelectedItem().toString());
 			}
 		});
+		
+		myButton.addActionListener(new ActionListener()
+		{
+			public void actionPerformed(ActionEvent selection)
+			{
+				// toString() of the selected Hipster
+				baseController.impactHipsters();
+				repaint();
+			}
+		});
 	}
 }

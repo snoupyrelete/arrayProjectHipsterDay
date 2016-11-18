@@ -48,6 +48,14 @@ public class ArrayController
 			
 		}
 	}
+	
+	public void impactHipsters()
+	{
+		for(Hipster currentHipster: hipsters)
+		{
+			currentHipster.calculateHipsterRank(10, -5);
+		}
+	}
 	//Level 3
 	private void showHipsterLevelThree()
 	{

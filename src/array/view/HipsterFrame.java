@@ -26,7 +26,7 @@ public class HipsterFrame extends JFrame
 	{
 		this.setContentPane(appPanel);
 		this.setTitle("Array window");
-		this.setSize(new Dimension(500, 500));
+		this.setSize(new Dimension(750, 500));
 		this.setResizable(false);
 		this.setVisible(true);
 	}
